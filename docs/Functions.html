@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Functions  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Functions  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html"> Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDGGiesbrecht/SDGCaching"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html"> Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Functions  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:F10SDGCaching12cachedResulturFzT5cacheRGSqx_11computationFzT_x_x">cachedResult(cache:computation:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:F10SDGCaching12cachedResultu0_Rxs8HashablerFzT5cacheRGVs10Dictionaryxq__9parameterx11computationFzxq__q_">cachedResult(cache:parameter:computation:)</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Functions</h1>
+            <p>The following functions are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Caching"></a>
+                <a name="//apple_ref/swift/Section/Caching" class="dashAnchor"></a>
+                <a href="#/Caching">
+                  <h3 class="section-name">Caching</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:F10SDGCaching12cachedResulturFzT5cacheRGSqx_11computationFzT_x_x"></a>
+                    <a name="//apple_ref/swift/Function/cachedResult(cache:computation:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:F10SDGCaching12cachedResulturFzT5cacheRGSqx_11computationFzT_x_x">cachedResult(cache:computation:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If <code>cache</code> is non‐<code>nil</code>, its contents are immediately returned; if <code>cache</code> is <code>nil</code>, the result of <code>computation</code> is evaluated, returned, and stored in <code>cache</code> for future calls.</p>
+
+<p><li><p>Parameters:</p>
+<li>cache: The variable in which to cache the result. Declare it in the appropriate scope for the desired cache lifetime. The cache can be refreshed at any time by setting it to <code>nil</code> elsewhere.</li>
+<li>computation: The computation to be evaluated.</li>
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    The result of <code>computation</code>.</p>
+
+<p></div></li></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">cachedResult</span><span class="o">&lt;</span><span class="kt">Result</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">cache</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Result</span><span class="p">?,</span> <span class="nv">computation</span><span class="p">:</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Result</span><span class="p">)</span> <span class="k">rethrows</span> <span class="o">-&gt;</span> <span class="kt">Result</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cache</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The variable in which to cache the result. Declare it in the appropriate scope for the desired cache lifetime. The cache can be refreshed at any time by setting it to <code>nil</code> elsewhere.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>computation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The computation to be evaluated.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The result of <code>computation</code>.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:F10SDGCaching12cachedResultu0_Rxs8HashablerFzT5cacheRGVs10Dictionaryxq__9parameterx11computationFzxq__q_"></a>
+                    <a name="//apple_ref/swift/Function/cachedResult(cache:parameter:computation:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:F10SDGCaching12cachedResultu0_Rxs8HashablerFzT5cacheRGVs10Dictionaryxq__9parameterx11computationFzxq__q_">cachedResult(cache:parameter:computation:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If <code>cache[parameter]</code> is non‐<code>nil</code>, its contents are immediately returned; if <code>cache[parameter]</code> is <code>nil</code>, the result of <code>computation</code> is evaluated, returned, and stored in <code>cache[parameter]</code> for future calls.</p>
+
+<p><li>Parameters:</p>
+
+<p><ul>
+<li>cache: A dictionary in which to cache the results. Declare it in the appropriate scope for the desired cache lifetime. The cache can be refreshed at any time by setting it to <code>[:]</code> elsewhere.</li>
+<li>computation: The computation to be evaluated.</li>
+</ul></li>
+<div class="aside aside-returns">
+    <p class="aside-title">Returns</p>
+    The result of <code>computation(parameter)</code>.</p>
+
+<p></div></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">cachedResult</span><span class="o">&lt;</span><span class="kt">Parameter</span><span class="p">,</span> <span class="kt">Result</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">cache</span><span class="p">:</span> <span class="k">inout</span> <span class="p">[</span><span class="kt">Parameter</span><span class="p">:</span> <span class="kt">Result</span><span class="p">],</span> <span class="nv">parameter</span><span class="p">:</span> <span class="kt">Parameter</span><span class="p">,</span> <span class="nv">computation</span><span class="p">:</span> <span class="p">(</span><span class="kt">Parameter</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Result</span><span class="p">)</span> <span class="k">rethrows</span> <span class="o">-&gt;</span> <span class="kt">Result</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cache</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A dictionary in which to cache the results. Declare it in the appropriate scope for the desired cache lifetime. The cache can be refreshed at any time by setting it to <code>[:]</code> elsewhere.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameter</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A parameter to use in <code>computation</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>computation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The computation to be evaluated.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The result of <code>computation(parameter)</code>.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>Copyright ©2016 Jeremy David Giesbrecht and the SDGCaching contributors. All rights reserved.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.2</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
