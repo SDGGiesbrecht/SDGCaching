@@ -6,6 +6,8 @@ SDGCaching automates caching for results of complex or time‐consuming function
 
 * Automated caching for results of complex or time‐consuming functions via `cachedResult(cache:computation:)`, etc.
 
+(For a list of other modules in the SDG family, see [here](https://github.com/SDGGiesbrecht/SDG/blob/master/README.md).)
+
 ## Importing
 
 SDGCaching is intended for use with the [Swift Package Manager](https://swift.org/package-manager/).
