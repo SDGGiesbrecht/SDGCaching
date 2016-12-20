@@ -44,7 +44,6 @@ class SDGCachingTests: XCTestCase {
         XCTAssert(callCount == 2)
     }
     
-    
     static var allTests : [(String, (SDGCachingTests) -> () throws -> Void)] {
         return [
             ("testCaching", testCaching),

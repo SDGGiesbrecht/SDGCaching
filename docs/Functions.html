@@ -72,15 +72,6 @@
                       <div class="abstract">
                         <p>If <code>cache</code> is non‐<code>nil</code>, its contents are immediately returned; if <code>cache</code> is <code>nil</code>, the result of <code>computation</code> is evaluated, returned, and stored in <code>cache</code> for future calls.</p>
 
-<p><li><p>Parameters:</p>
-<li>cache: The variable in which to cache the result. Declare it in the appropriate scope for the desired cache lifetime. The cache can be refreshed at any time by setting it to <code>nil</code> elsewhere.</li>
-<li>computation: The computation to be evaluated.</li>
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    The result of <code>computation</code>.</p>
-
-<p></div></li></p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -145,18 +136,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>If <code>cache[parameter]</code> is non‐<code>nil</code>, its contents are immediately returned; if <code>cache[parameter]</code> is <code>nil</code>, the result of <code>computation</code> is evaluated, returned, and stored in <code>cache[parameter]</code> for future calls.</p>
-
-<p><li>Parameters:</p>
-
-<p><ul>
-<li>cache: A dictionary in which to cache the results. Declare it in the appropriate scope for the desired cache lifetime. The cache can be refreshed at any time by setting it to <code>[:]</code> elsewhere.</li>
-<li>computation: The computation to be evaluated.</li>
-</ul></li>
-<div class="aside aside-returns">
-    <p class="aside-title">Returns</p>
-    The result of <code>computation(parameter)</code>.</p>
-
-<p></div></p>
 
                       </div>
                       <div class="declaration">

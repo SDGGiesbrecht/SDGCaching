@@ -17,7 +17,7 @@
 ///     - cache: The variable in which to cache the result. Declare it in the appropriate scope for the desired cache lifetime. The cache can be refreshed at any time by setting it to `nil` elsewhere.
 ///     - computation: The computation to be evaluated.
 ///
-///  - Returns: The result of `computation`.
+/// - Returns: The result of `computation`.
 public func cachedResult<Result>(cache: inout Result?, computation: () throws -> Result) rethrows -> Result {
     if let result = cache {
         return result
@@ -37,5 +37,5 @@ public func cachedResult<Result>(cache: inout Result?, computation: () throws ->
 
 /// - Returns: The result of `computation(parameter)`.
 public func cachedResult<Parameter, Result>(cache: inout [Parameter: Result], parameter: Parameter, computation: (Parameter) throws -> Result) rethrows -> Result {
-    return try cachedResult(cache: &cache[parameter]) {try computation(parameter)}
+    return try cachedResult(cache: &cache[parameter]) { try computation(parameter) }
 }
