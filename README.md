@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/SDGGiesbrecht/SDGCaching.svg?branch=master)](https://travis-ci.org/SDGGiesbrecht/SDGCaching)
+
 # SDGCaching
 
 SDGCaching automates caching for results of complex or time‐consuming functions.
