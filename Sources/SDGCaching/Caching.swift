@@ -2,7 +2,7 @@
 //
 // This source file is part of the SDGCaching open source project.
 //
-// Copyright ©2016 Jeremy David Giesbrecht and the SDGCaching contributors.
+// Copyright ©2016–2017 Jeremy David Giesbrecht and the SDGCaching contributors.
 //
 // Soli Deo gloria
 //
