@@ -2,7 +2,7 @@
     .Workspace Configuration.txt
 
     This source file is part of the SDGCaching open source project.
-    https://github.com/SDGGiesbrecht/SDGCaching
+    https://sdggiesbrecht.github.io/SDGCaching/macOS
 
     Copyright ©2017 Jeremy David Giesbrecht and the SDGCaching project contributors.
 
@@ -14,6 +14,24 @@
 
 [_Import https://github.com/SDGGiesbrecht/SDG_]
 
-Project Website: https://github.com/SDGGiesbrecht/SDGCaching
+Current Version: 1.0
+
+Project Website: https://sdggiesbrecht.github.io/SDGCaching/macOS
+Documentation URL: https://sdggiesbrecht.github.io/SDGCaching/macOS
+Repository URL: https://github.com/SDGGiesbrecht/SDGCaching
+
+Short Project Description: SDGCaching automates caching for results of complex or time‐consuming functions.
+
+[_Begin Quotation_]
+רַק הִשָּׁמֶר לְךָ וּשְׁמֹר נַפְשְׁךָ מְאֹד פֶּן־תִּשְׁכַּח אֶת־הַדְּבָרִים אֲשֶׁר־רָאוּ עֵינֶיךָ וּפֶן־יָסוּרוּ מִלְּבָבְךָ כֹּל יְמֵי חַיֶּיךָ וְהוֹדַעְתָּם לְבָנֶיךָ וְלִבְנֵי בָנֶיךָ׃
+Only watch yourself, and guard your soul carefully lest you forget the things your eyes have seen and let them fade from your heart all the days of your life. Make them known to your sons and to your sons’ sons.
+[_End_]
+Quotation Chapter: Deuteronomy 4
+Quotation Testament: Old
+Citation: ‎משה בן עמרם/Moshe son of Amram
+
+[_Begin Feature List_]
+- Automated caching for results of complex or time‐consuming functions via `cachedResult(cache:computation:)`, etc.
+[_End_]
 
 Skip Simulator: True

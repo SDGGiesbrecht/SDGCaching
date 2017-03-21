@@ -2,7 +2,7 @@
  Package.swift
 
  This source file is part of the SDGCaching open source project.
- https://github.com/SDGGiesbrecht/SDGCaching
+ https://sdggiesbrecht.github.io/SDGCaching/macOS
 
  Copyright ©2016–2017 Jeremy David Giesbrecht and the SDGCaching project contributors.
 

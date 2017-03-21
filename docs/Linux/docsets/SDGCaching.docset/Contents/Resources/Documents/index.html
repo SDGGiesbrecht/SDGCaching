@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SDGCaching  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="SDGCaching  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">SDGCaching Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDGGiesbrecht/SDGCaching"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">SDGCaching Reference</a>
+        <img id="carat" src="img/carat.png" />
+        SDGCaching  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="related-projects.html">Related Projects</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:F10SDGCaching12cachedResulturFzT5cacheRGSqx_11computationFzT_x_x">cachedResult(cache:computation:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:F10SDGCaching12cachedResultu0_Rxs8HashablerFzT5cacheRGVs10Dictionaryxq__9parameterx11computationFzxq__q_">cachedResult(cache:parameter:computation:)</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <!--
+ README.md
+
+ This source file is part of the SDGCaching open source project.
+ https://sdggiesbrecht.github.io/SDGCaching/macOS
+
+ Copyright ©2017 Jeremy David Giesbrecht and the SDGCaching project contributors.
+
+ Soli Deo gloria.
+
+ Licensed under the Apache Licence, Version 2.0.
+ See http://www.apache.org/licenses/LICENSE-2.0 for licence information.
+ -->
+
+<!--
+ !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!!
+ This file is managed by Workspace.
+ Manual changes will not persist.
+ For more information, see:
+ https://github.com/SDGGiesbrecht/Workspace/blob/master/Documentation/Read‐Me.md
+ !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!!
+ -->
+
+<p>APIs: <a href="https://sdggiesbrecht.github.io/SDGCaching/macOS">macOS</a> • <a href="https://sdggiesbrecht.github.io/SDGCaching/Linux">Linux</a> • <a href="https://sdggiesbrecht.github.io/SDGCaching/iOS">iOS</a> • <a href="https://sdggiesbrecht.github.io/SDGCaching/watchOS">watchOS</a> • <a href="https://sdggiesbrecht.github.io/SDGCaching/tvOS">tvOS</a></p>
+<a href='#sdgcaching' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='sdgcaching'>SDGCaching</h1>
+
+<p>SDGCaching automates caching for results of complex or time‐consuming functions.</p>
+
+<blockquote>
+<p><a href="https://www.biblegateway.com/passage/?search=Deuteronomy+4&version=WLC;NIVUK">רַק הִשָּׁמֶר לְךָ וּשְׁמֹר נַפְשְׁךָ מְאֹד פֶּן־תִּשְׁכַּח אֶת־הַדְּבָרִים אֲשֶׁר־רָאוּ עֵינֶיךָ וּפֶן־יָסוּרוּ מִלְּבָבְךָ כֹּל יְמֵי חַיֶּיךָ וְהוֹדַעְתָּם לְבָנֶיךָ וְלִבְנֵי בָנֶיךָ׃<br>Only watch yourself, and guard your soul carefully lest you forget the things your eyes have seen and let them fade from your heart all the days of your life. Make them known to your sons and to your sons’ sons.</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;―‎משה בן עמרם/Moshe son of Amram</p>
+</blockquote>
+<a href='#features' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='features'>Features</h2>
+
+<ul>
+<li>Automated caching for results of complex or time‐consuming functions via <code>cachedResult(cache:computation:)</code>, etc.</li>
+</ul>
+
+<a href='#importing' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='importing'>Importing</h2>
+
+<p>SDGCaching is intended for use with the <a href="https://swift.org/package-manager/">Swift Package Manager</a>.</p>
+
+<p>Simply add SDGCaching as a dependency in <code>Package.swift</code>:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
+    <span class="o">...</span>
+    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">...</span>
+        <span class="o">.</span><span class="kt">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/SDGGiesbrecht/SDGCaching"</span><span class="p">,</span> <span class="nv">versions</span><span class="p">:</span> <span class="s">"1.0.0"</span> <span class="o">..&lt;</span> <span class="s">"2.0.0"</span><span class="p">),</span>
+        <span class="o">...</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</code></pre>
+
+<p>SDGCaching can then be imported in source files:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SDGCaching</span>
+</code></pre>
+<a href='#example-usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='example-usage'>Example Usage</h2>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SDGCaching</span>
+
+<span class="c1">// This example uses SDGCaching to cache the computed properties of a structure.</span>
+
+<span class="kd">struct</span> <span class="kt">Number</span> <span class="p">{</span>
+
+    <span class="c1">// MARK: - Initialization</span>
+
+    <span class="nf">init</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+    <span class="p">}</span>
+
+    <span class="c1">// MARK: - Stored Property</span>
+
+    <span class="k">var</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">willSet</span> <span class="p">{</span>
+            <span class="c1">// Empty the cache whenever `value` changes.</span>
+            <span class="n">cache</span> <span class="o">=</span> <span class="kt">Cache</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// MARK: - Cache</span>
+
+    <span class="kd">private</span> <span class="kd">class</span> <span class="kt">Cache</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">square</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span>
+        <span class="k">var</span> <span class="nv">powers</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">:</span> <span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:]</span>
+    <span class="p">}</span>
+    <span class="kd">private</span> <span class="k">var</span> <span class="nv">cache</span> <span class="o">=</span> <span class="kt">Cache</span><span class="p">()</span>
+
+    <span class="c1">// MARK: - Computed Properties</span>
+
+    <span class="c1">// These will only be executed once as long as `value` stays the same.</span>
+    <span class="c1">// When `value` changes, they will be re‐executed the next time they are needed.</span>
+
+    <span class="k">var</span> <span class="nv">square</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nf">cachedResult</span><span class="p">(</span><span class="nv">cache</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">cache</span><span class="o">.</span><span class="n">square</span><span class="p">)</span> <span class="p">{</span>
+
+            <span class="k">var</span> <span class="nv">result</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">_</span> <span class="k">in</span> <span class="mi">1</span> <span class="o">...</span> <span class="n">value</span> <span class="p">{</span>
+                <span class="n">result</span> <span class="o">+=</span> <span class="n">value</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="n">result</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">toPower</span><span class="p">(</span><span class="n">of</span> <span class="nv">exponent</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nf">cachedResult</span><span class="p">(</span><span class="nv">cache</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">cache</span><span class="o">.</span><span class="n">powers</span><span class="p">,</span> <span class="nv">parameter</span><span class="p">:</span> <span class="n">exponent</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="nv">exponent</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="k">in</span>
+
+            <span class="k">var</span> <span class="nv">result</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">_</span> <span class="k">in</span> <span class="mi">1</span> <span class="o">...</span> <span class="n">exponent</span> <span class="p">{</span>
+                <span class="k">for</span> <span class="n">_</span> <span class="k">in</span> <span class="mi">1</span> <span class="o">...</span> <span class="n">value</span> <span class="p">{</span>
+                    <span class="n">result</span> <span class="o">+=</span> <span class="n">value</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="n">result</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#about' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='about'>About</h2>
+
+<p>The SDGCaching project is maintained by Jeremy David Giesbrecht.</p>
+
+<p>If SDGCaching saves you money, consider giving some of it as a <a href="https://paypal.me/JeremyGiesbrecht">donation</a>.</p>
+
+<p>If SDGCaching saves you time, consider devoting some of it to <a href="https://github.com/SDGGiesbrecht/SDGCaching">contributing</a> back to the project.</p>
+
+<blockquote>
+<p><a href="https://www.biblegateway.com/passage/?search=Luke+10&version=SBLGNT;NIVUK">Ἄξιος γὰρ ὁ ἐργάτης τοῦ μισθοῦ αὐτοῦ ἐστι.<br>For the worker is worthy of his wages.</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;―‎ישוע/Yeshuʼa</p>
+</blockquote>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>Copyright ©2017 Jeremy David Giesbrecht and the SDGCaching project contributors. All rights reserved.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

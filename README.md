@@ -2,7 +2,7 @@
  README.md
 
  This source file is part of the SDGCaching open source project.
- https://github.com/SDGGiesbrecht/SDGCaching
+ https://sdggiesbrecht.github.io/SDGCaching/macOS
 
  Copyright ©2017 Jeremy David Giesbrecht and the SDGCaching project contributors.
 
@@ -12,15 +12,28 @@
  See http://www.apache.org/licenses/LICENSE-2.0 for licence information.
  -->
 
+<!--
+ !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!!
+ This file is managed by Workspace.
+ Manual changes will not persist.
+ For more information, see:
+ https://github.com/SDGGiesbrecht/Workspace/blob/master/Documentation/Read‐Me.md
+ !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!!
+ -->
+
+APIs: [macOS](https://sdggiesbrecht.github.io/SDGCaching/macOS) • [Linux](https://sdggiesbrecht.github.io/SDGCaching/Linux) • [iOS](https://sdggiesbrecht.github.io/SDGCaching/iOS) • [watchOS](https://sdggiesbrecht.github.io/SDGCaching/watchOS) • [tvOS](https://sdggiesbrecht.github.io/SDGCaching/tvOS)
+
 # SDGCaching
 
 SDGCaching automates caching for results of complex or time‐consuming functions.
 
-## SDGCaching provides:
+> [רַק הִשָּׁמֶר לְךָ וּשְׁמֹר נַפְשְׁךָ מְאֹד פֶּן־תִּשְׁכַּח אֶת־הַדְּבָרִים אֲשֶׁר־רָאוּ עֵינֶיךָ וּפֶן־יָסוּרוּ מִלְּבָבְךָ כֹּל יְמֵי חַיֶּיךָ וְהוֹדַעְתָּם לְבָנֶיךָ וְלִבְנֵי בָנֶיךָ׃<br>Only watch yourself, and guard your soul carefully lest you forget the things your eyes have seen and let them fade from your heart all the days of your life. Make them known to your sons and to your sons’ sons.](https://www.biblegateway.com/passage/?search=Deuteronomy+4&version=WLC;NIVUK)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;―‎משה בן עמרם/Moshe son of Amram
 
-* Automated caching for results of complex or time‐consuming functions via `cachedResult(cache:computation:)`, etc.
+## Features
 
-(For a list of other modules in the SDG family, see [here](https://github.com/SDGGiesbrecht/SDG/blob/master/README.md).)
+- Automated caching for results of complex or time‐consuming functions via `cachedResult(cache:computation:)`, etc.
+
+(For a list of related projecs, see [here](Related%20Projects.md).)
 
 ## Importing
 
@@ -33,7 +46,8 @@ let package = Package(
     ...
     dependencies: [
         ...
-        .Package(url: "https://github.com/SDGGiesbrecht/SDGCaching", versions: "1.0.0" ..< "2.0.0")
+        .Package(url: "https://github.com/SDGGiesbrecht/SDGCaching", versions: "1.0.0" ..< "2.0.0"),
+        ...
     ]
 )
 ```
@@ -44,31 +58,43 @@ SDGCaching can then be imported in source files:
 import SDGCaching
 ```
 
-## Usage Example
-
-This example uses SDGCaching to cache the computed properties of a structure:
+## Example Usage
 
 ```swift
 import SDGCaching
 
+// This example uses SDGCaching to cache the computed properties of a structure.
+
 struct Number {
-    
-    var value: Int {
-        willSet {
-            cache = Cache()
-        }
-    }
-    
+
+    // MARK: - Initialization
+
     init(value: Int) {
         self.value = value
     }
-    
+
+    // MARK: - Stored Property
+
+    var value: Int {
+        willSet {
+            // Empty the cache whenever `value` changes.
+            cache = Cache()
+        }
+    }
+
+    // MARK: - Cache
+
     private class Cache {
         var square: Int?
         var powers: [Int: Int] = [:]
     }
     private var cache = Cache()
-    
+
+    // MARK: - Computed Properties
+
+    // These will only be executed once as long as `value` stays the same.
+    // When `value` changes, they will be re‐executed the next time they are needed.
+
     var square: Int {
         return cachedResult(cache: &cache.square) {
 
@@ -79,10 +105,9 @@ struct Number {
             return result
         }
     }
-    
-    func toThePowerOf(_ exponent: Int) -> Int {
-        return cachedResult(cache: &cache.powers, parameter: exponent) {
-            (exponent: Int) -> Int in
+
+    func toPower(of exponent: Int) -> Int {
+        return cachedResult(cache: &cache.powers, parameter: exponent) { (exponent: Int) -> Int in
 
             var result = 0
             for _ in 1 ... exponent {
@@ -96,8 +121,12 @@ struct Number {
 }
 ```
 
-The slow calculations in `square` and `toThePowerOf(_:)` will only be executed once as long as `value` stays the same. When `value` is changed, the cache is reinitialized, and the calculations will be re‐executed the next time they are needed.
+## About
 
-## Documentation:
+The SDGCaching project is maintained by Jeremy David Giesbrecht.
 
-Complete API documentation is available [here](https://sdggiesbrecht.github.io/SDGCaching/).
+If SDGCaching saves you money, consider giving some of it as a [donation](https://paypal.me/JeremyGiesbrecht).
+
+If SDGCaching saves you time, consider devoting some of it to [contributing](https://github.com/SDGGiesbrecht/SDGCaching) back to the project.
+
+> [Ἄξιος γὰρ ὁ ἐργάτης τοῦ μισθοῦ αὐτοῦ ἐστι.<br>For the worker is worthy of his wages.](https://www.biblegateway.com/passage/?search=Luke+10&version=SBLGNT;NIVUK)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;―‎ישוע/Yeshuʼa

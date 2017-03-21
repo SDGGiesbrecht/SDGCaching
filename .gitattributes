@@ -1,7 +1,7 @@
 # .gitattributes
 #
 # This source file is part of the SDGCaching open source project.
-# https://github.com/SDGGiesbrecht/SDGCaching
+# https://sdggiesbrecht.github.io/SDGCaching/macOS
 #
 # Copyright ©2017 Jeremy David Giesbrecht and the SDGCaching project contributors.
 #
@@ -21,10 +21,4 @@
 
 /Refresh?Workspace* linguist-vendored=true
 
-# [_End Workspace Section]# !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!!
-# THIS IS A SHARED FILE FROM THE REPOSITORY AT https://github.com/SDGGiesbrecht/SDG.
-# CHANGES MUST BE MADE THERE.
-# !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!!
-
-Refresh\ Workspace.command linguist-vendored=true
-Validate\ Changes.command linguist-vendored=true
+# [_End Workspace Section]

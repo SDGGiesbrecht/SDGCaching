@@ -2,7 +2,7 @@
  SDGCachingTests.swift
 
  This source file is part of the SDGCaching open source project.
- https://github.com/SDGGiesbrecht/SDGCaching
+ https://sdggiesbrecht.github.io/SDGCaching/macOS
 
  Copyright ©2016–2017 Jeremy David Giesbrecht and the SDGCaching project contributors.
 
@@ -15,10 +15,10 @@
 import XCTest
 @testable import SDGCaching
 
-class SDGCachingTests: XCTestCase {
-    
+class SDGCachingTests : XCTestCase {
+
     func testCaching() {
-        
+
         var callCount = 0
         func compute() -> Bool {
             callCount += 1
@@ -28,17 +28,17 @@ class SDGCachingTests: XCTestCase {
             callCount += 1
             return parameter
         }
-        
+
         var cache: Bool?
         var parameterizedCache: [Bool: Bool] = [:]
-        
+
         XCTAssert(cachedResult(cache: &cache, computation: compute) == true)
         XCTAssert(callCount == 1)
         XCTAssert(cachedResult(cache: &cache, computation: compute) == true)
         XCTAssert(callCount == 1)
-        
+
         callCount = 0
-        
+
         XCTAssert(cachedResult(cache: &parameterizedCache, parameter: true, computation: compute) == true)
         XCTAssert(cachedResult(cache: &parameterizedCache, parameter: false, computation: compute) == false)
         XCTAssert(callCount == 2)
@@ -46,10 +46,10 @@ class SDGCachingTests: XCTestCase {
         XCTAssert(cachedResult(cache: &parameterizedCache, parameter: false, computation: compute) == false)
         XCTAssert(callCount == 2)
     }
-    
-    static var allTests : [(String, (SDGCachingTests) -> () throws -> Void)] {
+
+    static var allTests: [(String, (SDGCachingTests) -> () throws -> Void)] {
         return [
-            ("testCaching", testCaching),
+            ("testCaching", testCaching)
         ]
     }
 }

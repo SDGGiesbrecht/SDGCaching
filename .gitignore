@@ -1,9 +1,9 @@
 # .gitignore
 #
 # This source file is part of the SDGCaching open source project.
-# https://github.com/SDGGiesbrecht/SDGCaching
+# https://sdggiesbrecht.github.io/SDGCaching/macOS
 #
-# Copyright ©2016–2017 Jeremy David Giesbrecht and the SDGCaching project contributors.
+# Copyright ©2017 Jeremy David Giesbrecht and the SDGCaching project contributors.
 #
 # Soli Deo gloria.
 #
@@ -22,11 +22,12 @@
 .DS_Store
 /.build
 /Packages
-/.Workspace
 /Validate\ Changes\ (macOS).command
 /Validate\ Changes\ (Linux).sh
-/.Linked Repositories
 /.Test\ Zone
 /*.xcodeproj
+/build
+undocumented.json
+*.tgz
 
 # [_End Workspace Section]
