@@ -22,13 +22,19 @@
 
 ## <a name="Command‐Line‐Tools">Command Line Tools</a>
 
-### [Workspace](https://github.com/SDGGiesbrecht/Workspace)
+### [Workspace](https://github.com/SDGGiesbrecht/Workspace#workspace)
+
+Workspace automates management of Swift projects.
 
 ## <a name="Foundation‐Level‐Libraries">Foundation Level Libraries</a>
 
-### [SDGLogic](https://github.com/SDGGiesbrecht/SDGLogic)
+### [SDGLogic](https://sdggiesbrecht.github.io/SDGLogic/macOS)
 
-### [SDGMathematics](https://github.com/SDGGiesbrecht/SDGMathematics)
+SDGLogic extends support for Boolean logic.
+
+### [SDGMathematics](https://sdggiesbrecht.github.io/SDGMathematics/macOS)
+
+SDGMathematics extends support for mathematics.
 
 ## <a name="Language‐Level‐Libraries">Language Level Libraries</a>
 

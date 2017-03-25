@@ -24,7 +24,7 @@ class SDGCachingTests : XCTestCase {
             callCount += 1
             return true
         }
-        func compute(parameter: Bool) -> Bool {
+        func compute(_ parameter: Bool) -> Bool {
             callCount += 1
             return parameter
         }
@@ -32,18 +32,18 @@ class SDGCachingTests : XCTestCase {
         var cache: Bool?
         var parameterizedCache: [Bool: Bool] = [:]
 
-        XCTAssert(cachedResult(cache: &cache, computation: compute) == true)
+        XCTAssert(cached(in: &cache, compute) == true)
         XCTAssert(callCount == 1)
-        XCTAssert(cachedResult(cache: &cache, computation: compute) == true)
+        XCTAssert(cached(in: &cache, compute) == true)
         XCTAssert(callCount == 1)
 
         callCount = 0
 
-        XCTAssert(cachedResult(cache: &parameterizedCache, parameter: true, computation: compute) == true)
-        XCTAssert(cachedResult(cache: &parameterizedCache, parameter: false, computation: compute) == false)
+        XCTAssert(cached(in: &parameterizedCache[true], { compute(true) }) == true)
+        XCTAssert(cached(in: &parameterizedCache[false], { compute(false) }) == false)
         XCTAssert(callCount == 2)
-        XCTAssert(cachedResult(cache: &parameterizedCache, parameter: true, computation: compute) == true)
-        XCTAssert(cachedResult(cache: &parameterizedCache, parameter: false, computation: compute) == false)
+        XCTAssert(cached(in: &parameterizedCache[true], { compute(true) }) == true)
+        XCTAssert(cached(in: &parameterizedCache[false], { compute(false) }) == false)
         XCTAssert(callCount == 2)
     }
 

@@ -31,7 +31,7 @@ SDGCaching automates caching for results of complex or time‐consuming function
 
 ## Features
 
-- Automated caching for results of complex or time‐consuming functions via `cachedResult(cache:computation:)`, etc.
+- Automated caching for results of complex or time‐consuming functions via `cached(in::)`.
 
 (For a list of related projecs, see [here](Related%20Projects.md).)
 
@@ -46,7 +46,7 @@ let package = Package(
     ...
     dependencies: [
         ...
-        .Package(url: "https://github.com/SDGGiesbrecht/SDGCaching", versions: "1.0.0" ..< "2.0.0"),
+        .Package(url: "https://github.com/SDGGiesbrecht/SDGCaching", versions: "2.0.0" ..< "3.0.0"),
         ...
     ]
 )
@@ -77,7 +77,7 @@ struct Number {
 
     var value: Int {
         willSet {
-            // Empty the cache whenever `value` changes.
+            // Empty the cache whenever the value property changes.
             cache = Cache()
         }
     }
@@ -92,11 +92,11 @@ struct Number {
 
     // MARK: - Computed Properties
 
-    // These will only be executed once as long as `value` stays the same.
-    // When `value` changes, they will be re‐executed the next time they are needed.
+    // These will only be executed once as long as the value property stays the same.
+    // When the value property changes, they will be re‐executed the next time they are needed.
 
     var square: Int {
-        return cachedResult(cache: &cache.square) {
+        return cached(in: &cache.square) {
 
             var result = 0
             for _ in 1 ... value {
@@ -107,7 +107,9 @@ struct Number {
     }
 
     func toPower(of exponent: Int) -> Int {
-        return cachedResult(cache: &cache.powers, parameter: exponent) { (exponent: Int) -> Int in
+
+        // This makes use of a dictionary to separate the cache for each exponent.
+        return cached(in: &cache.powers[exponent]) {
 
             var result = 0
             for _ in 1 ... exponent {

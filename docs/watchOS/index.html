@@ -39,10 +39,7 @@
             <a href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F10SDGCaching12cachedResulturFzT5cacheRGSqx_11computationFzT_x_x">cachedResult(cache:computation:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:F10SDGCaching12cachedResultu0_Rxs8HashablerFzT5cacheRGVs10Dictionaryxq__9parameterx11computationFzxq__q_">cachedResult(cache:parameter:computation:)</a>
+                <a href="Functions.html#/s:F10SDGCaching6cachedurFzT2inRGSqx_FzT_x_x">cached(in:_:)</a>
               </li>
             </ul>
           </li>
@@ -86,7 +83,7 @@
 <a href='#features' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='features'>Features</h2>
 
 <ul>
-<li>Automated caching for results of complex or time‐consuming functions via <code>cachedResult(cache:computation:)</code>, etc.</li>
+<li>Automated caching for results of complex or time‐consuming functions via <code>cached(in::)</code>.</li>
 </ul>
 
 <a href='#importing' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='importing'>Importing</h2>
@@ -98,7 +95,7 @@
     <span class="o">...</span>
     <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
         <span class="o">...</span>
-        <span class="o">.</span><span class="kt">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/SDGGiesbrecht/SDGCaching"</span><span class="p">,</span> <span class="nv">versions</span><span class="p">:</span> <span class="s">"1.0.0"</span> <span class="o">..&lt;</span> <span class="s">"2.0.0"</span><span class="p">),</span>
+        <span class="o">.</span><span class="kt">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/SDGGiesbrecht/SDGCaching"</span><span class="p">,</span> <span class="nv">versions</span><span class="p">:</span> <span class="s">"2.0.0"</span> <span class="o">..&lt;</span> <span class="s">"3.0.0"</span><span class="p">),</span>
         <span class="o">...</span>
     <span class="p">]</span>
 <span class="p">)</span>
@@ -124,7 +121,7 @@
 
     <span class="k">var</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span>
         <span class="k">willSet</span> <span class="p">{</span>
-            <span class="c1">// Empty the cache whenever `value` changes.</span>
+            <span class="c1">// Empty the cache whenever the value property changes.</span>
             <span class="n">cache</span> <span class="o">=</span> <span class="kt">Cache</span><span class="p">()</span>
         <span class="p">}</span>
     <span class="p">}</span>
@@ -139,11 +136,11 @@
 
     <span class="c1">// MARK: - Computed Properties</span>
 
-    <span class="c1">// These will only be executed once as long as `value` stays the same.</span>
-    <span class="c1">// When `value` changes, they will be re‐executed the next time they are needed.</span>
+    <span class="c1">// These will only be executed once as long as the value property stays the same.</span>
+    <span class="c1">// When the value property changes, they will be re‐executed the next time they are needed.</span>
 
     <span class="k">var</span> <span class="nv">square</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nf">cachedResult</span><span class="p">(</span><span class="nv">cache</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">cache</span><span class="o">.</span><span class="n">square</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nf">cached</span><span class="p">(</span><span class="nv">in</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">cache</span><span class="o">.</span><span class="n">square</span><span class="p">)</span> <span class="p">{</span>
 
             <span class="k">var</span> <span class="nv">result</span> <span class="o">=</span> <span class="mi">0</span>
             <span class="k">for</span> <span class="n">_</span> <span class="k">in</span> <span class="mi">1</span> <span class="o">...</span> <span class="n">value</span> <span class="p">{</span>
@@ -154,7 +151,9 @@
     <span class="p">}</span>
 
     <span class="kd">func</span> <span class="nf">toPower</span><span class="p">(</span><span class="n">of</span> <span class="nv">exponent</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="nf">cachedResult</span><span class="p">(</span><span class="nv">cache</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">cache</span><span class="o">.</span><span class="n">powers</span><span class="p">,</span> <span class="nv">parameter</span><span class="p">:</span> <span class="n">exponent</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="nv">exponent</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="k">in</span>
+
+        <span class="c1">// This makes use of a dictionary to separate the cache for each exponent.</span>
+        <span class="k">return</span> <span class="nf">cached</span><span class="p">(</span><span class="nv">in</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">cache</span><span class="o">.</span><span class="n">powers</span><span class="p">[</span><span class="n">exponent</span><span class="p">])</span> <span class="p">{</span>
 
             <span class="k">var</span> <span class="nv">result</span> <span class="o">=</span> <span class="mi">0</span>
             <span class="k">for</span> <span class="n">_</span> <span class="k">in</span> <span class="mi">1</span> <span class="o">...</span> <span class="n">exponent</span> <span class="p">{</span>
@@ -183,7 +182,7 @@
         </section>
         <section id="footer">
           <p>Copyright ©2017 Jeremy David Giesbrecht and the SDGCaching project contributors. All rights reserved.</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.4</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.5</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
