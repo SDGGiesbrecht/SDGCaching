@@ -14,24 +14,78 @@
 
 [_Import https://github.com/SDGGiesbrecht/SDG_]
 
-Current Version: 2.0.0
+Current Version: 2.1.0
 
 Project Website: https://sdggiesbrecht.github.io/SDGCaching/macOS
 Documentation URL: https://sdggiesbrecht.github.io/SDGCaching/macOS
 Repository URL: https://github.com/SDGGiesbrecht/SDGCaching
 
-Short Project Description: SDGCaching automates caching for results of complex or time‐consuming functions.
+[_Begin Localizations_]
+en-CA
+en-GB
+en-US
+de-DE
+fr-FR
+[_End_]
+
+[_Begin Short Project Description_]
+[_en-GB_]
+SDGCaching automates caching for results of complex or time‐consuming functions.
+[_en-US_]
+SDGCaching automates caching for results of complex or time‐consuming functions.
+[_en-CA_]
+SDGCaching automates caching for results of complex or time‐consuming functions.
+[_de-DE_]
+SDGCaching („SDGZwischenspeichern“) automatisiert das Zwischenspeichern für Ergebnisse aufwendigen Funktionen.
+[_fr-FR_]
+SDGCaching (« SDGMiseEnCache ») automatise la mise en cache des résultats des fonctions complexes ou chronophages.
+[_End_]
 
 [_Begin Quotation_]
 רַק הִשָּׁמֶר לְךָ וּשְׁמֹר נַפְשְׁךָ מְאֹד פֶּן־תִּשְׁכַּח אֶת־הַדְּבָרִים אֲשֶׁר־רָאוּ עֵינֶיךָ וּפֶן־יָסוּרוּ מִלְּבָבְךָ כֹּל יְמֵי חַיֶּיךָ וְהוֹדַעְתָּם לְבָנֶיךָ וְלִבְנֵי בָנֶיךָ׃
+[_End_]
+[_Begin Quotation Translation_]
+[_en-GB_]
 Only watch yourself, and guard your soul carefully lest you forget the things your eyes have seen and let them fade from your heart all the days of your life. Make them known to your sons and to your sons’ sons.
+[_en-US_]
+Only watch yourself, and guard your soul carefully lest you forget the things your eyes have seen and let them fade from your heart all the days of your life. Make them known to your sons and to your sons’ sons.
+[_en-CA_]
+Only watch yourself, and guard your soul carefully lest you forget the things your eyes have seen and let them fade from your heart all the days of your life. Make them known to your sons and to your sons’ sons.
+[_de-DE_]
+Nur hüte dich und bewahre deine Seele sehr, dass du die Dinge nicht vergisst, die deine Augen gesehen haben, und dass sie nicht aus deinem Herzen weichen alle Tage deines Lebens. Gib sie deinen Kindern und Kindeskindern bekannt.
+[_fr-FR_]
+Seulement, prends garde à toi et veille attentivement sur ton âme, tous les jours de ta vie, afin de ne pas oublier les choses que tes yeux ont vu et de ne pas le laisser sortir de ton cœur. Enseigne‐le à tes enfants et aux enfants de tes enfants.
 [_End_]
 Quotation Chapter: Deuteronomy 4
 Quotation Testament: Old
-Citation: ‎משה בן עמרם/Moshe son of Amram
+[_Begin Citation_]
+[_en-GB_]
+‎משה/Moshe
+[_en-US_]
+‎משה/Moshe
+[_en-CA_]
+‎משה/Moshe
+[_de-DE_]
+‎משה/Moshe
+[_fr-FR_]
+‎משה/Moshe
+[_End_]
 
 [_Begin Feature List_]
+[_en-GB_]
 - Automated caching for results of complex or time‐consuming functions via `cached(in::)`.
+[_en-US_]
+- Automated caching for results of complex or time‐consuming functions via `cached(in::)`.
+[_en-CA_]
+- Automated caching for results of complex or time‐consuming functions via `cached(in::)`.
+[_de-DE_]
+(Die deutsche APS wurde noch von kein Muttersprachler überprüft und könnte Rechtschreibungsfehler beinhalten. [Verbesserungsvorschläge](https://github.com/SDGGiesbrecht/SDGCaching/issues) sind willkommen.)
+
+- Automatisiertes Zwischenspeichern für Ergebnisse aufwendigen Funktionen durch `zwischengespeichert(in::)`.
+[_fr-FR_]
+(L’IPA française n’a pas encore été corrigée par un locuteur natif et peut contenir des fautes d’orthographe. Des [suggestions d’améloiration](https://github.com/SDGGiesbrecht/SDGCaching/issues) serait bienvenues.)
+
+- Mise en cache automatisée des résultats des fonctions complexes ou chronophages par `mis(enCache::)`.
 [_End_]
 
 Skip Simulator: True

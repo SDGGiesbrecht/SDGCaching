@@ -12,7 +12,7 @@
  See http://www.apache.org/licenses/LICENSE-2.0 for licence information.
  */
 
-// MARK: - cached(in::)
+// Version 1: 2017‐03‐24
 
 @available(*, unavailable, renamed: "cached")
 public func cachedResult<Result>(cache: inout Result?, computation: () throws -> Result) rethrows -> Result {

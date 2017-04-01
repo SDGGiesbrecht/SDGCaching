@@ -31,7 +31,34 @@
             <a href="Guides.html">Guides</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="related-projects.html">Related Projects</a>
+                <a href="en-read-me.html">🇨🇦EN Read Me</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="en-related-projects.html">🇨🇦EN Related Projects</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="de-lies-mich.html">🇩🇪DE Lies mich</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="de-verwandte-projekte.html">🇩🇪DE Verwandte Projekte</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="fr-lisez-moi.html">🇫🇷FR Lisez moi</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="fr-projets-lis.html">🇫🇷FR Projets liés</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="en-read-me.html">🇬🇧EN Read Me</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="en-related-projects.html">🇬🇧EN Related Projects</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="en-read-me.html">🇺🇸EN Read Me</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="en-related-projects.html">🇺🇸EN Related Projects</a>
               </li>
             </ul>
           </li>
@@ -40,6 +67,12 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Functions.html#/s:F10SDGCaching6cachedurFzT2inRGSqx_FzT_x_x">cached(in:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:F10SDGCaching3misurFzT7enCacheRGSqx_FzT_x_x">mis(enCache:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:F10SDGCaching19zwischengespeicherturFzT2inRGSqx_FzT_x_x">zwischengespeichert(in:_:)</a>
               </li>
             </ul>
           </li>
@@ -55,10 +88,10 @@
           <section class="section task-group-section">
             <div class="task-group">
               <div class="task-name-container">
-                <a name="/Caching"></a>
-                <a name="//apple_ref/swift/Section/Caching" class="dashAnchor"></a>
-                <a href="#/Caching">
-                  <h3 class="section-name">Caching</h3>
+                <a name="/%F0%9F%87%AC%F0%9F%87%A7%F0%9F%87%BA%F0%9F%87%B8%F0%9F%87%A8%F0%9F%87%A6%20Caching%20%E2%80%A2%20%F0%9F%87%A9%F0%9F%87%AA%20Zwischenspeichern%20%E2%80%A2%20%F0%9F%87%AB%F0%9F%87%B7%20Mise%20en%20cache"></a>
+                <a name="//apple_ref/swift/Section/🇬🇧🇺🇸🇨🇦 Caching • 🇩🇪 Zwischenspeichern • 🇫🇷 Mise en cache" class="dashAnchor"></a>
+                <a href="#/%F0%9F%87%AC%F0%9F%87%A7%F0%9F%87%BA%F0%9F%87%B8%F0%9F%87%A8%F0%9F%87%A6%20Caching%20%E2%80%A2%20%F0%9F%87%A9%F0%9F%87%AA%20Zwischenspeichern%20%E2%80%A2%20%F0%9F%87%AB%F0%9F%87%B7%20Mise%20en%20cache">
+                  <h3 class="section-name">🇬🇧🇺🇸🇨🇦 Caching • 🇩🇪 Zwischenspeichern • 🇫🇷 Mise en cache</h3>
                 </a>
               </div>
               <ul>
@@ -105,7 +138,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The variable in which to cache the result. Declare it in the appropriate scope for the desired cache lifetime. The cache can be refreshed at any time by setting it to <code>nil</code> elsewhere.</p>
+                                  <p>The variable in which to cache the result. Declare it in the appropriate scope for the desired cache lifetime. The cache can be refreshed at any time by setting it to <code>nil</code>.</p>
 
                                 </div>
                               </td>
@@ -129,6 +162,150 @@
                       <div>
                         <h4>Return Value</h4>
                         <p>The result of <code>computation</code>.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:F10SDGCaching19zwischengespeicherturFzT2inRGSqx_FzT_x_x"></a>
+                    <a name="//apple_ref/swift/Function/zwischengespeichert(in:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:F10SDGCaching19zwischengespeicherturFzT2inRGSqx_FzT_x_x">zwischengespeichert(in:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Gibt das Ergebnis von <code>berechnung</code> zurück, in dem einen Zwischenspeicher verwendet wird, um die Leistung bei Wiederholungen zu erhöhen.</p>
+
+<p>Das wird erreicht, in dem entweder &hellip;</p>
+
+<ul>
+<li>ein früheres Ergebnis aus dem Zwischenspeicher geholt wird (wenn <code>zwischenspeicher</code> nicht <code>nul</code> ist), oder</li>
+<li><p><code>berechnung</code> ausgeführt wird, und das Ergebnis zu <code>zwischenspeicher</code> gespeichert und zurückgegeben wird.</p></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">zwischengespeichert</span><span class="o">&lt;</span><span class="kt">Ergebnis</span><span class="o">&gt;</span><span class="p">(</span><span class="k">in</span> <span class="nv">zwischenspeicher</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Ergebnis</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">berechnung</span><span class="p">:</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Ergebnis</span><span class="p">)</span> <span class="k">rethrows</span> <span class="o">-&gt;</span> <span class="kt">Ergebnis</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>zwischenspeicher</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Die Variable, in dem das Ergebnis zwischengespeichert werden soll. Definiere sie in dem Sichtbarkeitsbereich, der die gewünschte Lebensdauer für den Zwischenspeicher entspricht. Der Zwischenspeicher kann jederzeit entleert werden, in dem man ihn auf <code>nil</code> setzt.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>berechnung</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Die Berechnung, die ausgeführt werden soll.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Das Ergebnis von <code>berechnung</code>.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:F10SDGCaching3misurFzT7enCacheRGSqx_FzT_x_x"></a>
+                    <a name="//apple_ref/swift/Function/mis(enCache:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:F10SDGCaching3misurFzT7enCacheRGSqx_FzT_x_x">mis(enCache:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retourne le résultat de <code>calcul</code>, en utilisant une cache pour améloirer l’efficacité en case de répétition.</p>
+
+<p>Ceci est accompli, soit en&hellip;</p>
+
+<ul>
+<li>retirant le résultat précédent de <code>cache</code> (si <code>cache</code> est non‐<code>nil</code>), ou</li>
+<li><p>exécutant <code>calcul</code> et enregistrant le résultat dans <code>cache</code> avant de le retourner.</p></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">mis</span><span class="o">&lt;</span><span class="kt">Ré</span><span class="n">sultat</span><span class="o">&gt;</span><span class="p">(</span><span class="n">enCache</span> <span class="nv">cache</span><span class="p">:</span> <span class="k">inout</span> <span class="kt">Ré</span><span class="n">sultat</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">calcul</span><span class="p">:</span> <span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Ré</span><span class="n">sultat</span><span class="p">)</span> <span class="k">rethrows</span> <span class="o">-&gt;</span> <span class="kt">Ré</span><span class="n">sultat</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>cache</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>La variable dans lequel le résultat devrait être mis. Déclarez‐la dans la portée appropriée pour la durée de vie désirée. La cache peut être réinitialisée, n’importe quand, en la remettant à <code>nil</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>calcul</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Le calcul à évaluer.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Le résultat de <code>calcul</code>.</p>
 
                       </div>
                     </section>

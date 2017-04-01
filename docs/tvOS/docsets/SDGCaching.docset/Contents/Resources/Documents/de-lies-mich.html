@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>🇩🇪DE Lies mich  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="🇩🇪DE Lies mich  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">SDGCaching Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/SDGGiesbrecht/SDGCaching"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">SDGCaching Reference</a>
+        <img id="carat" src="img/carat.png" />
+        🇩🇪DE Lies mich  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Guides.html">Guides</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="en-read-me.html">🇨🇦EN Read Me</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="en-related-projects.html">🇨🇦EN Related Projects</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="de-lies-mich.html">🇩🇪DE Lies mich</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="de-verwandte-projekte.html">🇩🇪DE Verwandte Projekte</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="fr-lisez-moi.html">🇫🇷FR Lisez moi</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="fr-projets-lis.html">🇫🇷FR Projets liés</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="en-read-me.html">🇬🇧EN Read Me</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="en-related-projects.html">🇬🇧EN Related Projects</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="en-read-me.html">🇺🇸EN Read Me</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="en-related-projects.html">🇺🇸EN Related Projects</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:F10SDGCaching6cachedurFzT2inRGSqx_FzT_x_x">cached(in:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:F10SDGCaching3misurFzT7enCacheRGSqx_FzT_x_x">mis(enCache:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:F10SDGCaching19zwischengespeicherturFzT2inRGSqx_FzT_x_x">zwischengespeichert(in:_:)</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <!--
+ 🇩🇪DE Lies mich.md
+
+ This source file is part of the SDGCaching open source project.
+ https://sdggiesbrecht.github.io/SDGCaching/macOS
+
+ Copyright ©2017 Jeremy David Giesbrecht and the SDGCaching project contributors.
+
+ Soli Deo gloria.
+
+ Licensed under the Apache Licence, Version 2.0.
+ See http://www.apache.org/licenses/LICENSE-2.0 for licence information.
+ -->
+
+<!--
+ !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!!
+ This file is managed by Workspace.
+ Manual changes will not persist.
+ For more information, see:
+ https://github.com/SDGGiesbrecht/Workspace/blob/master/Documentation/Read‐Me.md
+ !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!! !!!!!!!
+ -->
+
+
+<p>SAPs: <a href="https://sdggiesbrecht.github.io/SDGCaching/macOS">macOS</a> • <a href="https://sdggiesbrecht.github.io/SDGCaching/Linux">Linux</a> • <a href="https://sdggiesbrecht.github.io/SDGCaching/iOS">iOS</a> • <a href="https://sdggiesbrecht.github.io/SDGCaching/watchOS">watchOS</a> • <a href="https://sdggiesbrecht.github.io/SDGCaching/tvOS">tvOS</a></p>
+<a href='#sdgcaching' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='sdgcaching'>SDGCaching</h1>
+
+<p>SDGCaching („SDGZwischenspeichern“) automatisiert das Zwischenspeichern für Ergebnisse aufwendigen Funktionen.</p>
+
+<blockquote>
+<p><a href="https://www.biblegateway.com/passage/?search=Deuteronomy+4&version=WLC;SCH2000">רַק הִשָּׁמֶר לְךָ וּשְׁמֹר נַפְשְׁךָ מְאֹד פֶּן־תִּשְׁכַּח אֶת־הַדְּבָרִים אֲשֶׁר־רָאוּ עֵינֶיךָ וּפֶן־יָסוּרוּ מִלְּבָבְךָ כֹּל יְמֵי חַיֶּיךָ וְהוֹדַעְתָּם לְבָנֶיךָ וְלִבְנֵי בָנֶיךָ׃<br>Nur hüte dich und bewahre deine Seele sehr, dass du die Dinge nicht vergisst, die deine Augen gesehen haben, und dass sie nicht aus deinem Herzen weichen alle Tage deines Lebens. Gib sie deinen Kindern und Kindeskindern bekannt.</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;―‎משה/Moshe</p>
+</blockquote>
+<a href='#merkmale' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='merkmale'>Merkmale</h2>
+
+<p>(Die deutsche APS wurde noch von kein Muttersprachler überprüft und könnte Rechtschreibungsfehler beinhalten. <a href="https://github.com/SDGGiesbrecht/SDGCaching/issues">Verbesserungsvorschläge</a> sind willkommen.)</p>
+
+<ul>
+<li>Automatisiertes Zwischenspeichern für Ergebnisse aufwendigen Funktionen durch <code>zwischengespeichert(in::)</code>.</li>
+</ul>
+
+<a href='#einfu-hrung' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='einfu-hrung'>Einführung</h2>
+
+<p>SDGCaching ist für den Einsatz mit dem <a href="https://swift.org/package-manager/">Swift Package Manager</a> vorgesehen.</p>
+
+<p>Fügen Sie SDGCaching einfach in der Abhängigkeitsliste in <code>Package.swift</code> hinzu:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
+    <span class="o">...</span>
+    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">...</span>
+        <span class="o">.</span><span class="kt">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/SDGGiesbrecht/SDGCaching"</span><span class="p">,</span> <span class="nv">versions</span><span class="p">:</span> <span class="s">"2.1.0"</span> <span class="o">..&lt;</span> <span class="s">"3.0.0"</span><span class="p">),</span>
+        <span class="o">...</span>
+    <span class="p">]</span>
+<span class="p">)</span>
+</code></pre>
+
+<p>Dann kann SDGCaching in Quelldateien eingeführt werden:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SDGCaching</span>
+</code></pre>
+<a href='#verwendungsbeispiel' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='verwendungsbeispiel'>Verwendungsbeispiel</h2>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">SDGCaching</span>
+
+<span class="c1">// Dieses Beispiel verwendet SDGCaching, um die berechneten Eigenschaften einer Struktur zwischenzuspeichern.</span>
+
+<span class="kd">struct</span> <span class="kt">Zahl</span> <span class="p">{</span>
+
+    <span class="c1">// MARK: - Voreinstellung</span>
+
+    <span class="nf">init</span><span class="p">(</span><span class="nv">wert</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">wert</span> <span class="o">=</span> <span class="n">wert</span>
+    <span class="p">}</span>
+
+    <span class="c1">// MARK: - Gespeicherte Eigenschaft</span>
+
+    <span class="k">var</span> <span class="nv">wert</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">willSet</span> <span class="p">{</span>
+            <span class="c1">// Den Zwischenspeicher entleeren, wenn die „wert“‐Eigenschaft geändert wird.</span>
+            <span class="n">zwischenspeicher</span> <span class="o">=</span> <span class="kt">Zwischenspeicher</span><span class="p">()</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="c1">// MARK: - Zwischenspeicher</span>
+
+    <span class="kd">private</span> <span class="kd">class</span> <span class="kt">Zwischenspeicher</span> <span class="p">{</span>
+        <span class="k">var</span> <span class="nv">quadrat</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span>
+        <span class="k">var</span> <span class="nv">potenzen</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">:</span> <span class="kt">Int</span><span class="p">]</span> <span class="o">=</span> <span class="p">[:]</span>
+    <span class="p">}</span>
+    <span class="kd">private</span> <span class="k">var</span> <span class="nv">zwischenspeicher</span> <span class="o">=</span> <span class="kt">Zwischenspeicher</span><span class="p">()</span>
+
+    <span class="c1">// MARK: - Berechnete Eigenschaften</span>
+
+    <span class="c1">// Die Folgende werden nur einmal berechnet, solange die „wert“‐Eigenschaft ungeändert bleibt.</span>
+    <span class="c1">// Wenn die „wert“‐Eigenschaft geändert wird, werden die Folgende bei Bedarf neuberechnet.</span>
+
+    <span class="k">var</span> <span class="nv">quadrat</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="nf">zwischengespeichert</span><span class="p">(</span><span class="nv">in</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">zwischenspeicher</span><span class="o">.</span><span class="n">quadrat</span><span class="p">)</span> <span class="p">{</span>
+
+            <span class="k">var</span> <span class="nv">ergebnis</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">_</span> <span class="k">in</span> <span class="mi">1</span> <span class="o">...</span> <span class="n">wert</span> <span class="p">{</span>
+                <span class="n">ergebnis</span> <span class="o">+=</span> <span class="n">wert</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="n">ergebnis</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="kd">func</span> <span class="nf">hoch</span><span class="p">(</span><span class="n">_</span> <span class="nv">exponent</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span> <span class="p">{</span>
+
+        <span class="c1">// Hier wird ein Wörterbuch verwendet, um den Zwischenspeicher für verschiedenen Exponenten zu teilen.</span>
+        <span class="k">return</span> <span class="nf">zwischengespeichert</span><span class="p">(</span><span class="nv">in</span><span class="p">:</span> <span class="o">&amp;</span><span class="n">zwischenspeicher</span><span class="o">.</span><span class="n">potenzen</span><span class="p">[</span><span class="n">exponent</span><span class="p">])</span> <span class="p">{</span>
+
+            <span class="k">var</span> <span class="nv">ergebnis</span> <span class="o">=</span> <span class="mi">0</span>
+            <span class="k">for</span> <span class="n">_</span> <span class="k">in</span> <span class="mi">1</span> <span class="o">...</span> <span class="n">exponent</span> <span class="p">{</span>
+                <span class="k">for</span> <span class="n">_</span> <span class="k">in</span> <span class="mi">1</span> <span class="o">...</span> <span class="n">wert</span> <span class="p">{</span>
+                    <span class="n">ergebnis</span> <span class="o">+=</span> <span class="n">wert</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">return</span> <span class="n">ergebnis</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#u-ber' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='u-ber'>Über</h2>
+
+<p>Das SDGCaching‐Projekt wird von Jeremy David Giesbrecht erhalten.</p>
+
+<p>Wenn SDGCaching Ihnen Geld sparrt, denken Sie darüber, etwas davon zu <a href="https://paypal.me/JeremyGiesbrecht">spenden</a>.</p>
+
+<p>Wenn SDGCaching Inhen Zeit sparrt, denken Sie darüber, etwas davon zu gebrauchen, um zum Projekt <a href="https://github.com/SDGGiesbrecht/SDGCaching">beizutragen</a>.</p>
+
+<blockquote>
+<p><a href="https://www.biblegateway.com/passage/?search=Luke+10&version=SBLGNT;SCH2000">Ἄξιος γὰρ ὁ ἐργάτης τοῦ μισθοῦ αὐτοῦ ἐστι.<br>Denn der Arbeiter ist seines Lohns würdig.</a><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;―‎ישוע/Yeshuʼa</p>
+</blockquote>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>Copyright ©2017 Jeremy David Giesbrecht and the SDGCaching project contributors. All rights reserved.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.7.5</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

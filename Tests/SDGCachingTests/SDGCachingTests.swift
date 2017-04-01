@@ -45,6 +45,26 @@ class SDGCachingTests : XCTestCase {
         XCTAssert(cached(in: &parameterizedCache[true], { compute(true) }) == true)
         XCTAssert(cached(in: &parameterizedCache[false], { compute(false) }) == false)
         XCTAssert(callCount == 2)
+
+        // 🇩🇪
+
+        cache = nil
+        callCount = 0
+
+        XCTAssert(zwischengespeichert(in: &cache, compute) == true)
+        XCTAssert(callCount == 1)
+        XCTAssert(zwischengespeichert(in: &cache, compute) == true)
+        XCTAssert(callCount == 1)
+
+        // 🇫🇷
+
+        cache = nil
+        callCount = 0
+
+        XCTAssert(mis(enCache: &cache, compute) == true)
+        XCTAssert(callCount == 1)
+        XCTAssert(mis(enCache: &cache, compute) == true)
+        XCTAssert(callCount == 1)
     }
 
     static var allTests: [(String, (SDGCachingTests) -> () throws -> Void)] {
