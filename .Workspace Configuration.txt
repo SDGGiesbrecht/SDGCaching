@@ -15,7 +15,6 @@
 [_Import https://github.com/SDGGiesbrecht/SDG_]
 
 Current Version: 2.1.0
-
 Project Website: https://sdggiesbrecht.github.io/SDGCaching/macOS
 Documentation URL: https://sdggiesbrecht.github.io/SDGCaching/macOS
 Repository URL: https://github.com/SDGGiesbrecht/SDGCaching

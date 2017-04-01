@@ -40,4 +40,4 @@ SDGMathematics extends support for mathematics.
 
 ### [SDGCaching](https://sdggiesbrecht.github.io/SDGCaching/macOS)
 
-SDGCaching automates caching for results of complex or time‐consuming functions.
+SDGCaching („SDGZwischenspeichern“) automatisiert das Zwischenspeichern für Ergebnisse aufwendigen Funktionen.
