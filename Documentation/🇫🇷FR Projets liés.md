@@ -16,28 +16,29 @@
 
 ### Table de matières
 
-- [Outils de ligne de commande](#Outils‐de‐ligne‐de‐commande)
-- [Bibliothèques au niveau de la fondation](#Bibliothèques‐au‐niveau‐de‐la‐fondation)
-- [Bibliothèques au niveau de la langage](#Bibliothèques‐au‐niveau‐de‐la‐langage)
+- [Command Line Tools](#Command‐Line‐Tools)
+- [Libraries](#Libraries)
 
-## <a name="Outils‐de‐ligne‐de‐commande">Outils de ligne de commande</a>
+## <a name="Command‐Line‐Tools">Command Line Tools</a>
 
 ### [Workspace](https://github.com/SDGGiesbrecht/Workspace#workspace)
 
 Workspace automates management of Swift projects.
 
-## <a name="Bibliothèques‐au‐niveau‐de‐la‐fondation">Bibliothèques au niveau de la fondation</a>
+## <a name="Libraries">Libraries</a>
 
-### [SDGLogic](https://sdggiesbrecht.github.io/SDGLogic/macOS)
+### [SDGCornerstone](https://sdggiesbrecht.github.io/SDGCornerstone/macOS)
 
-SDGLogic extends support for Boolean logic.
-
-### [SDGMathematics](https://sdggiesbrecht.github.io/SDGMathematics/macOS)
-
-SDGMathematics extends support for mathematics.
-
-## <a name="Bibliothèques‐au‐niveau‐de‐la‐langage">Bibliothèques au niveau de la langage</a>
+SDGCornerstone forms the foundation of the SDG module family. It establishes design patterns and provides general‐use extensions to the [Swift Standard Library](https://developer.apple.com/reference/swift) and [Foundation](https://developer.apple.com/reference/foundation).
 
 ### [SDGCaching](https://sdggiesbrecht.github.io/SDGCaching/macOS)
 
 SDGCaching (« SDGMiseEnCache ») automatise la mise en cache des résultats des fonctions complexes ou chronophages.
+
+### [SDGLogic](https://sdggiesbrecht.github.io/SDGLogic/macOS)
+
+SDGLogic (« SDGLogique ») étend le support pour la logique de Boole.
+
+### [SDGMathematics](https://sdggiesbrecht.github.io/SDGMathematics/macOS)
+
+SDGMathematics extends support for mathematics.

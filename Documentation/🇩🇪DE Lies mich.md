@@ -27,6 +27,8 @@ SAPs: [macOS](https://sdggiesbrecht.github.io/SDGCaching/macOS) • [Linux](http
 
 # SDGCaching
 
+**⚠ Dieses Projekt ist veraltet. Es wurde von [SDGCornerstone](https://github.com/SDGGiesbrecht/SDGCornerstone) abgelöst. ⚠**
+
 SDGCaching („SDGZwischenspeichern“) automatisiert das Zwischenspeichern für Ergebnisse aufwendigen Funktionen.
 
 > [רַק הִשָּׁמֶר לְךָ וּשְׁמֹר נַפְשְׁךָ מְאֹד פֶּן־תִּשְׁכַּח אֶת־הַדְּבָרִים אֲשֶׁר־רָאוּ עֵינֶיךָ וּפֶן־יָסוּרוּ מִלְּבָבְךָ כֹּל יְמֵי חַיֶּיךָ וְהוֹדַעְתָּם לְבָנֶיךָ וְלִבְנֵי בָנֶיךָ׃<br>Nur hüte dich und bewahre deine Seele sehr, dass du die Dinge nicht vergisst, die deine Augen gesehen haben, und dass sie nicht aus deinem Herzen weichen alle Tage deines Lebens. Gib sie deinen Kindern und Kindeskindern bekannt.](https://www.biblegateway.com/passage/?search=Deuteronomy+4&version=WLC;SCH2000)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;―‎משה/Moshe

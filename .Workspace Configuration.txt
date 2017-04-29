@@ -29,14 +29,24 @@ fr-FR
 
 [_Begin Short Project Description_]
 [_en-GB_]
+**⚠ This project is obsolete. It has been superseded by [SDGCornerstone](https://github.com/SDGGiesbrecht/SDGCornerstone). ⚠**
+
 SDGCaching automates caching for results of complex or time‐consuming functions.
 [_en-US_]
+**⚠ This project is obsolete. It has been superseded by [SDGCornerstone](https://github.com/SDGGiesbrecht/SDGCornerstone). ⚠**
+
 SDGCaching automates caching for results of complex or time‐consuming functions.
 [_en-CA_]
+**⚠ This project is obsolete. It has been superseded by [SDGCornerstone](https://github.com/SDGGiesbrecht/SDGCornerstone). ⚠**
+
 SDGCaching automates caching for results of complex or time‐consuming functions.
 [_de-DE_]
+**⚠ Dieses Projekt ist veraltet. Es wurde von [SDGCornerstone](https://github.com/SDGGiesbrecht/SDGCornerstone) abgelöst. ⚠**
+
 SDGCaching („SDGZwischenspeichern“) automatisiert das Zwischenspeichern für Ergebnisse aufwendigen Funktionen.
 [_fr-FR_]
+**⚠ Ce projet est obsolète. Il était supplanté par [SDGCornerstone](https://github.com/SDGGiesbrecht/SDGCornerstone). ⚠**
+
 SDGCaching (« SDGMiseEnCache ») automatise la mise en cache des résultats des fonctions complexes ou chronophages.
 [_End_]
 
